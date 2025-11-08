@@ -1217,6 +1217,62 @@ export default function PulseLanding() {
         </div>
       </section>
 
+      {/* Team Section - Carrossel */}
+      <section 
+        ref={el => sectionRefs.current['team'] = el}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black via-[#01743A]/10 to-black"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className={`text-center mb-16 transition-all duration-1000 ${visibleSections['team'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
+              <span className="text-white">Nossa </span>
+              <span className="text-[#01743A]">Equipe</span>
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Desenvolvedores responsáveis pela solução Pulse
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                name: "Raphael Lamaison Kim",
+                rm: "RM557914",
+                image: "/src/assets/raphael.png"
+              },
+              {
+                name: "Gabriela de Sousa Reis",
+                rm: "RM558830",
+                image: "/src/assets/gabriela.png"
+              },
+              {
+                name: "Laura Amadeu Soares",
+                rm: "RM566690",
+                image: "/src/assets/laura.png"
+              }
+            ].map((member, idx) => (
+              <div 
+                key={idx}
+                className={`bg-gradient-to-br from-[#01743A]/10 to-black border-2 border-[#01743A]/50 rounded-xl overflow-hidden hover:border-[#01743A] transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#01743A]/40 group ${visibleSections['team'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                style={{ transitionDelay: `${idx * 0.2}s` }}
+              >
+                <div className="aspect-square bg-gradient-to-br from-[#01743A]/20 to-black overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+                  <p className="text-[#01743A] font-semibold">{member.rm}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-[#01743A]/30 py-12 px-4 sm:px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto">
