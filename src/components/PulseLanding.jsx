@@ -1238,17 +1238,17 @@ export default function PulseLanding() {
               {
                 name: "Raphael Lamaison Kim",
                 rm: "RM557914",
-                image: "/src/assets/raphael.png"
+                image: "/raphael.png"
               },
               {
                 name: "Gabriela de Sousa Reis",
                 rm: "RM558830",
-                image: "/src/assets/gabriela.png"
+                image: "/gabriela.png"
               },
               {
                 name: "Laura Amadeu Soares",
                 rm: "RM566690",
-                image: "/src/assets/laura.png"
+                image: "/laura.png"
               }
             ].map((member, idx) => (
               <div 
